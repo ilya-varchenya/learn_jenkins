@@ -1,4 +1,4 @@
-package org.foo
+package ilya
 
 // point in 3D space
 class Point {
