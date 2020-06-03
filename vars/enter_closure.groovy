@@ -1,5 +1,5 @@
-def call(Closure params) {
+def call(Closure body) {
     node('master') {
-        echo "${params}"
+        body()
     }
 }
