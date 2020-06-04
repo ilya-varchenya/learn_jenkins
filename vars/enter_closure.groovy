@@ -1,6 +1,6 @@
-def call(Map body) {
+def call(List methods) {
     node('master') {
-        for (method in body.methods) {
+        for (method in methods) {
             sh method()
         }
     }
