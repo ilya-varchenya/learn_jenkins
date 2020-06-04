@@ -3,7 +3,6 @@ def call(Closure body) {
 //    body.resolveStrategy = Closure.DELEGATE_FIRST
 //    body.delegate = parameters
 
-    methods = parameters.methods
     echo "111"
     body()
     echo "222"
