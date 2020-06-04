@@ -7,10 +7,8 @@ def call(Closure body) {
 
     node('master') {
         echo "222"
-        for (method in parameters) {
-            body()
-            echo "333"
-            echo method()
-        }
+        echo body.methods
+        echo "333"
+        body()
     }
 }
