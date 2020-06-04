@@ -1,5 +1,5 @@
 def call(Closure body) {
-    def parameters = [:]
+    def parameters = body
 //    body.resolveStrategy = Closure.DELEGATE_FIRST
 //    body.delegate = parameters
 
@@ -9,7 +9,7 @@ def call(Closure body) {
     echo "222"
     node('master') {
         echo "333"
-        for (method in methods) {
+        for (method in parameters) {
             echo "444"
             echo method()
         }
