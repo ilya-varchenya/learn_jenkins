@@ -4,12 +4,12 @@ def call(Closure body) {
 //    body.delegate = parameters
 
     echo "111"
-    body()
-    echo "222"
+
     node('master') {
-        echo "333"
+        echo "222"
         for (method in parameters) {
-            echo "444"
+            body()
+            echo "333"
             echo method()
         }
     }
