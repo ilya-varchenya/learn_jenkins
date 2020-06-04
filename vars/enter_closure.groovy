@@ -5,7 +5,7 @@ def call(Closure body) {
 
     methods = parameters.methods
 
-    body()
+    echo body()
 
     node('master') {
         for (method in methods) {
