@@ -1,5 +1,7 @@
-def call(Closure body) {
+def call(Closure parameters) {
     node('master') {
-        body()
+        for (parameter in parameters) {
+            parameter()
+        }
     }
 }
