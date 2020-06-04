@@ -9,7 +9,7 @@ def call(Closure body) {
 
     node('master') {
         for (method in methods) {
-            method()
+            echo method()
         }
     }
 }
